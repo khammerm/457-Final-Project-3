@@ -24,3 +24,4 @@
 ## Acknowledgements
 
 - Movement Controls: [UnitySourceMovement](https://github.com/Olezen/UnitySourceMovement)
+- Health Bar Images: [Health-Bar](https://github.com/Brackeys/Health-Bar)
