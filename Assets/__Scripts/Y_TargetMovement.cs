@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetMovement : MonoBehaviour
+public class Y_TargetMovement : MonoBehaviour
 {
 
     [SerializeField] public float distanceToCover;
