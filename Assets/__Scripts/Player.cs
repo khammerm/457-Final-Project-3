@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float health = 100f;
+    //public int maxHealth = 100;
+    //public int currentHealth;
 
     public HealthBar healthBar;
 
     // start player at max health (100 may be a bit high, but we can scale enemy damage) 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(health);
     }
 
     // may use this later
@@ -22,14 +22,14 @@ public class Player : MonoBehaviour
         // press z to simulate player taking dmg, demonstrate color gradient
         if(Input.GetKeyDown(KeyCode.Z))
         {
-           TakeDamage(20);
+           TakeDamage(20f);
         }
     }
 
     // simple take damage script for when we implement enemy AI.
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        health -= damage;
+        healthBar.SetHealth(health);
     }
 }
