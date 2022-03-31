@@ -7,6 +7,8 @@ public class Gun : MonoBehaviour
     public float impactForce = 30f;
     public float fireRate = 15f;
 
+    public LineRenderer bulletTrail;
+    public Transform shootPoint;
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
@@ -44,7 +46,19 @@ public class Gun : MonoBehaviour
             // instantiate our impact system with Quaternian rotation, would prob work better with diff particle system.
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);
+
+            SpawnBulletTrail(hit.point);
         }
-        
+    }
+    public void  SpawnBulletTrail(Vector3 hitPoint)
+    {
+        GameObject bulletTrailEffect = Instantiate(bulletTrail.gameObject, shootPoint.transform.forward, Quaternion.identity);
+
+        LineRenderer lineR = bulletTrailEffect.GetComponent<LineRenderer>();
+
+        lineR.SetPosition(0, shootPoint.position);
+        lineR.SetPosition(1, hitPoint);
+
+        Destroy(bulletTrailEffect, .1f);
     }
 }
