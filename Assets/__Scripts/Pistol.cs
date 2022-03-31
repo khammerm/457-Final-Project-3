@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Pistol : MonoBehaviour
 {
-    public float damage = 10f;
-    public float range = 100f;
-    public float impactForce = 30f;
-    public float fireRate = 15f;
+    public float damage = 5f;
+    public float range = 70f;
+    public float impactForce = 20f;
+    public float fireRate = 10f;
 
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
@@ -16,7 +16,7 @@ public class Gun : MonoBehaviour
     void Update()
     {
         // basic input reading
-        if(Input.GetButton("Fire 1") && Time.time >= nextTimeToFire)
+        if(Input.GetButtonDown("Fire 1") && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f/fireRate;
             Shoot();
@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
         // raycasting for bullets
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
+            Debug.Log(hit.transform.name);
             // dmg for targets (future enemies)
             Target target = hit.transform.GetComponent<Target>();
             if(target != null)
