@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 
     public HealthBar healthBar;
 
+    
+
     // start player at max health (100 may be a bit high, but we can scale enemy damage) 
     void Start()
     {
@@ -16,7 +18,8 @@ public class Player : MonoBehaviour
 
     // may use this later
     void Update()
-    { 
+    {
+        
         // press z to simulate player taking dmg, demonstrate color gradient
         if(Input.GetKeyDown(KeyCode.Z))
         {
@@ -30,4 +33,6 @@ public class Player : MonoBehaviour
         health -= damage;
         healthBar.SetHealth(health);
     }
+
+    
 }

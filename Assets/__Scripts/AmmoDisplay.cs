@@ -11,18 +11,19 @@ public class AmmoDisplay : MonoBehaviour
 
     public Text weaponName;
     public Text ammoText;
-    public Text reloadingText;
+    public GameObject reloadingText;
     // Start is called before the first frame update
     void Start()
     {
-        reloadingText.enabled = false;
+        reloadingText.gameObject.SetActive(false);
+        StartCoroutine(Waiter());
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(Input.GetMouseButtonDown(0) && !gunFiring && ammo>0)
+        if(Input.GetMouseButton(0) && !gunFiring && ammo>0)
         {
             gunFiring = true;
             ammo--;
@@ -51,14 +52,13 @@ public class AmmoDisplay : MonoBehaviour
 
     void ReloadWeapon()
     {
-        if (ammo == 0 || Input.GetKeyDown(KeyCode.R))
+        if (ammo == 0 && Input.GetKeyDown(KeyCode.R))
         {
-            reloadingText.enabled = true;
+            reloadingText.gameObject.SetActive(true);
 
-            //NEED TO ADD A DELAY HERE TO SHOW RELOADING TEXT
-            //yield return new WaitForSeconds(3);
-            ammo = 25;
-            reloadingText.enabled = false;
+            
+            ammo = 400;
+            reloadingText.gameObject.SetActive(false);
 
 
         }
@@ -66,21 +66,22 @@ public class AmmoDisplay : MonoBehaviour
 
     }
 
-    IEnumerator waiter()
+    IEnumerator Waiter()
     {
-        //Rotate 90 deg
-        transform.Rotate(new Vector3(90, 0, 0), Space.World);
+        if (ammo == 0 || Input.GetKeyDown(KeyCode.R))
+        {
+            reloadingText.gameObject.SetActive(true);
 
-        //Wait for 4 seconds
-        yield return new WaitForSeconds(4);
+            
+            ammo = 400;
+            yield return new WaitForSeconds(2);
+            reloadingText.gameObject.SetActive(false);
 
-        //Rotate 40 deg
-        transform.Rotate(new Vector3(40, 0, 0), Space.World);
 
-        //Wait for 2 seconds
-        yield return new WaitForSeconds(2);
+        }
 
-        //Rotate 20 deg
-        transform.Rotate(new Vector3(20, 0, 0), Space.World);
+        
+
+     
     }
 }
