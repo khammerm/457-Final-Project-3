@@ -9,35 +9,37 @@ public class AmmoDisplay : MonoBehaviour
     public int ammo = 25;
     public bool gunFiring = false;
 
+    public bool isReloading = false;
+
     public Text weaponName;
     public Text ammoText;
     public GameObject reloadingText;
     // Start is called before the first frame update
     void Start()
     {
+        gunFiring = false;
+        isReloading = false;
         reloadingText.gameObject.SetActive(false);
-        StartCoroutine(Waiter());
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(Input.GetMouseButton(0) && !gunFiring && ammo>0)
+        if(Input.GetMouseButton(0) && !gunFiring && ammo>0 && isReloading ==false)
         {
             gunFiring = true;
             ammo--;
             UpdateTexts();
             gunFiring = false;
+            
         }
 
-        if (ammo == 0 || Input.GetKeyDown(KeyCode.R))
-        {
-            Debug.Log("got here");
 
-            ReloadWeapon();
 
-        }
+
+        ReloadWeapon();
 
         UpdateTexts();
         
@@ -52,13 +54,18 @@ public class AmmoDisplay : MonoBehaviour
 
     void ReloadWeapon()
     {
-        if (ammo == 0 && Input.GetKeyDown(KeyCode.R))
+        if (ammo == 0 || Input.GetKeyDown(KeyCode.R))
         {
-            reloadingText.gameObject.SetActive(true);
+            if(ammo != 400)
+            {
+                isReloading = true;
+                gunFiring = false;
+                reloadingText.gameObject.SetActive(true);
+                StartCoroutine(Waiter());
 
+            }
             
-            ammo = 400;
-            reloadingText.gameObject.SetActive(false);
+            
 
 
         }
@@ -68,20 +75,19 @@ public class AmmoDisplay : MonoBehaviour
 
     IEnumerator Waiter()
     {
-        if (ammo == 0 || Input.GetKeyDown(KeyCode.R))
-        {
-            reloadingText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2);
 
-            
-            ammo = 400;
-            yield return new WaitForSeconds(2);
-            reloadingText.gameObject.SetActive(false);
-
-
-        }
-
+        ammo = 400;
         
+            
+        reloadingText.gameObject.SetActive(false);
 
-     
+        isReloading = false;
+
     }
+
+
+
+
 }
+

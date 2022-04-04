@@ -485,9 +485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 25
   gunFiring: 0
+  isReloading: 0
   weaponName: {fileID: 7377760736943123106}
   ammoText: {fileID: 7377760738079170101}
-  reloadingText: {fileID: 7377760736583051037}
+  reloadingText: {fileID: 0}
 --- !u!1 &7377760736943123105
 GameObject:
   m_ObjectHideFlags: 0
@@ -21501,6 +21502,7 @@ MonoBehaviour:
   fpsCam: {fileID: 3295685620239472669}
   muzzleFlash: {fileID: 7377760738121102186}
   impactEffect: {fileID: 7378769773227841246}
+  ammo: {fileID: 0}
 --- !u!1001 &7377760736886088463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21621,6 +21623,7 @@ MonoBehaviour:
   fpsCam: {fileID: 3295685620239472669}
   muzzleFlash: {fileID: 7377760737465215751}
   impactEffect: {fileID: 7378769773227841246}
+  ammo: {fileID: 7377760736881444968}
 --- !u!1001 &7377760737010811494
 PrefabInstance:
   m_ObjectHideFlags: 0
