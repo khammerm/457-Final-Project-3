@@ -5,7 +5,7 @@ using UnityEngine;
 public class Minimap : MonoBehaviour
 {
     public GameObject minimap;
-    public GameObject player;
+    public GameObject maze;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,9 @@ public class Minimap : MonoBehaviour
     {
         
 
-        if (collider == player)
+        if (collider.gameObject.tag == "Maze")
         {
-            Debug.Log("set inactive");
+            RenderSettings.fog = true;
             minimap.gameObject.SetActive(false);
         }
     }
@@ -35,9 +35,9 @@ public class Minimap : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         
-        if (other == player)
+        if (other.gameObject.tag == "Maze")
         {
-            Debug.Log("set active");
+            RenderSettings.fog = false;
             minimap.gameObject.SetActive(true);
         }
     }

@@ -30190,36 +30190,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4477030707949804, guid: 00debf980412c49418327c56a1a60db0, type: 3}
   m_PrefabInstance: {fileID: 1948116319}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &937855105
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937855107}
-  m_Layer: 0
-  m_Name: Minimap on/off
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &937855107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937855105}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.627233, y: -22.201101, z: 42.639362}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &938945075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4302042920928744, guid: c45c41f59dbb9894cb895ef86d325026, type: 3}
@@ -51845,6 +51815,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3295685619930153467, guid: 170127ca5382cbd4e8aa508c03c35d27, type: 3}
   m_PrefabInstance: {fileID: 1408331418}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1708584907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708584905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89ec40089011cae4cb83898aa9fcc7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimap: {fileID: 1405794257}
+  maze: {fileID: 1986944009}
 --- !u!65 &1708584911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51853,7 +51837,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708584905}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -59346,28 +59330,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1986944012}
   - component: {fileID: 1986944011}
-  - component: {fileID: 1986944010}
   m_Layer: 0
   m_Name: Maze border
-  m_TagString: Untagged
+  m_TagString: Maze
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1986944010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986944009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89ec40089011cae4cb83898aa9fcc7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minimap: {fileID: 1405794257}
-  player: {fileID: 876152801}
 --- !u!65 &1986944011
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59389,7 +59358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986944009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.9, y: -0.8, z: 30}
+  m_LocalPosition: {x: 134.2, y: -0.8, z: 30}
   m_LocalScale: {x: 43.774757, y: 13.814509, z: 43.761658}
   m_Children: []
   m_Father: {fileID: 0}
