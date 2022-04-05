@@ -5,11 +5,14 @@ using UnityEngine;
 public class Minimap : MonoBehaviour
 {
     public GameObject minimap;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         RenderSettings.fog = false;
+        
+        
     }
 
     // Update is called once per frame
@@ -18,20 +21,23 @@ public class Minimap : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("Enter maze");
-        if (other.gameObject.tag == ("Player"))
+        
+
+        if (collider == player)
         {
+            Debug.Log("set inactive");
             minimap.gameObject.SetActive(false);
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit maze");
-        if (other.gameObject.tag == ("Player"))
+        
+        if (other == player)
         {
+            Debug.Log("set active");
             minimap.gameObject.SetActive(true);
         }
     }
