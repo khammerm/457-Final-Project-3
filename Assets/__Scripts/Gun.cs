@@ -23,7 +23,6 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        
         if(ammo.isReloading== false && canUse && Script.selectedWeapon == 1)
         {
             // basic input reading
@@ -57,24 +56,18 @@ public class Gun : MonoBehaviour
             // raycasting for bullets
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
             {
-                // dmg for targets (future enemies)
-                Target target = hit.transform.GetComponent<Target>();
-                if (target != null)
-                {
-                    target.TakeDamage(damage);
-                }
-                if (hit.rigidbody != null)
-                {
-                    hit.rigidbody.AddForce(-hit.normal * impactForce);
-                }
-                // instantiate our impact system with Quaternian rotation, would prob work better with diff particle system.
-                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGO, 2f);
-
-                SpawnBulletTrail(hit.point);
+                target.TakeDamage(damage);
             }
+            if (hit.rigidbody != null)
+            {
+                hit.rigidbody.AddForce(-hit.normal * impactForce);
+            }
+            // instantiate our impact system with Quaternian rotation, would prob work better with diff particle system.
+            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGO, 2f);
+
+            SpawnBulletTrail(hit.point);
         }
-        
     }
     public void  SpawnBulletTrail(Vector3 hitPoint)
     {
