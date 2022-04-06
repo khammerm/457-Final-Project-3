@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-
+        
         if(ammo.isReloading== false && canUse && Script.selectedWeapon == 1)
         {
             // basic input reading
@@ -47,7 +47,7 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
 
-        if (canUse)
+        if(canUse)
         {
             if(gunSound != null)
                 gunSound.Play();  // shooting sound
@@ -74,8 +74,9 @@ public class Gun : MonoBehaviour
                 SpawnBulletTrail(hit.point);
             }
         }
+        
     }
-    public void SpawnBulletTrail(Vector3 hitPoint)
+    public void  SpawnBulletTrail(Vector3 hitPoint)
     {
         if (ammo.isReloading == false)
         {
