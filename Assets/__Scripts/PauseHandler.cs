@@ -24,8 +24,6 @@ public class PauseHandler : MonoBehaviour
 
     void TogglePause()
     {
-        // FIXME: Weapons consume ammo and perform shooting raycasting while in pause menu
-
         bool isPaused = !pausePanel.activeSelf;
         
         if(isPaused)
