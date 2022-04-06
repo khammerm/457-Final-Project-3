@@ -54,4 +54,3 @@ public class PauseHandler : MonoBehaviour
             gameObject.SetActive(active);
         }
     }
-}
