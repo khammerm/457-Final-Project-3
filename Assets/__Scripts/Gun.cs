@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        
+
         if(ammo.isReloading== false && canUse && Script.selectedWeapon == 1)
         {
             // basic input reading
