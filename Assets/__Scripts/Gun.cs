@@ -70,7 +70,7 @@ public class Gun : MonoBehaviour
             SpawnBulletTrail(hit.point);
         }
     }
-    public void  SpawnBulletTrail(Vector3 hitPoint)
+    public void SpawnBulletTrail(Vector3 hitPoint)
     {
         if (ammo.isReloading == false)
         {
