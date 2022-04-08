@@ -6,22 +6,22 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float impactForce = 30f;
     public float fireRate = 15f;
+    public bool canUse = true;
 
     public LineRenderer bulletTrail;
     public Transform shootPoint;
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
-
     public AmmoDisplay ammo;
-
+    
     private float nextTimeToFire = 0f;
 
     void Update()
     {
 
 
-        if(ammo.isReloading== false)
+        if(ammo.isReloading== false && canUse)
         {
             // basic input reading
             if (Input.GetButton("Fire 1") && Time.time >= nextTimeToFire)
@@ -33,11 +33,10 @@ public class Gun : MonoBehaviour
         
     }
 
-    void Shoot()
+    public void Shoot()
     {
 
-        Debug.Log(ammo.isReloading);
-        if(ammo.isReloading == false)
+        if(canUse)
         {
             // playing our muzzleflash particle system
             muzzleFlash.Play();

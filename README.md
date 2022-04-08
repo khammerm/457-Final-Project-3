@@ -25,5 +25,5 @@
 
 - Movement Controls: [UnitySourceMovement](https://github.com/Olezen/UnitySourceMovement)
 - Health Bar Images: [Health-Bar](https://github.com/Brackeys/Health-Bar)
-- Various Development Assets [DevAssets](https://devassets.com)
+- Various Development Assets: [DevAssets](https://devassets.com)
 - SNAPS ProtoType | Sci-Fi/ Industrial
