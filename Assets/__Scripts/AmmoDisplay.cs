@@ -77,7 +77,7 @@ public class AmmoDisplay : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        ammo = 400;
+        ammo = 500;
         
             
         reloadingText.gameObject.SetActive(false);
