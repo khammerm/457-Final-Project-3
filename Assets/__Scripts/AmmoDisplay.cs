@@ -75,7 +75,7 @@ public class AmmoDisplay : MonoBehaviour
 
     IEnumerator Waiter()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         ammo = 400;
         

@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void StartFunction()
     {
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("Level_Demo");
     }
 
     public void QuitFunction()
@@ -28,7 +28,7 @@ public class Menu : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level_Demo");
     }
 
     public void Level2()

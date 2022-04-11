@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/___Scenes/Menus/MainMenu.unity
+    path: Assets/___Scenes/MainMenu.unity
     guid: 2e66b79de12756f4883728c0c57bf7e6
   - enabled: 1
     path: Assets/___Scenes/Testing/Scene 1.unity
@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/___Scenes/Menus/LoseMenu.unity
     guid: 9feff061a9875324591bfdd45c72ae3a
   - enabled: 1
-    path: Assets/___Scenes/Rooms/Room 1.unity
+    path: Assets/___Scenes/Rooms/Old/Room 1.unity
     guid: 775b0e35c692e0f4daf52a0ec4674cd5
   - enabled: 1
     path: Assets/___Scenes/Menus/WinMenu.unity
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/___Scenes/Menus/Levels.unity
     guid: b98f3a51bc398c04daeff114fbdeaa5d
+  - enabled: 1
+    path: Assets/___Scenes/Rooms/Level_Demo.unity
+    guid: 94d60943efb37f4499ade5ce76fc2a80
   m_configObjects: {}
