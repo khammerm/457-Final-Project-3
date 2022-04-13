@@ -51,5 +51,19 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Target_Practice");
     }
 
+    public void MazeLevel()
+    {
+        SceneManager.LoadScene("Maze");
+    }
+
+    public void MazeLoad()
+    {
+        SceneManager.LoadScene("Loading_Maze");
+    }
+
+
+    //wait function here
+
+
 
 }
