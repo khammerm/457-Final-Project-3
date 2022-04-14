@@ -26,7 +26,7 @@ public class EndLevel : MonoBehaviour
         {
             DontDestroyOnLoad(endLevelSound);
             endLevelSound.Play();
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("WinMenu");
         }
     }
 }
