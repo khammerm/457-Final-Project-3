@@ -33,6 +33,15 @@ EditorBuildSettings:
     path: Assets/___Scenes/Rooms/Maze.unity
     guid: a5131be8aa4fc1747b966a89b500fb5e
   - enabled: 1
-    path: Assets/___Scenes/Loading_Maze.unity
+    path: Assets/___Scenes/Load_Levels/Loading_Demo.unity
     guid: 53eefcc98ae5742478adeac64a30a05c
+  - enabled: 1
+    path: Assets/___Scenes/Load_Levels/Loading_Jumping.unity
+    guid: dfcb590460bbeba44ba79fab2b7f4f4c
+  - enabled: 1
+    path: Assets/___Scenes/Load_Levels/Loading_Run.unity
+    guid: 998790705c8c35a4fb0a6815fc42a9bc
+  - enabled: 1
+    path: Assets/___Scenes/Load_Levels/Loading_Practice.unity
+    guid: 9cbcb1a330de57d48be49efcbe2f5c42
   m_configObjects: {}

@@ -23,7 +23,7 @@ public class Menu : MonoBehaviour
 
     public void Training()
     {
-        SceneManager.LoadScene("Level_Demo");
+        SceneManager.LoadScene("Loading_Demo");
     }
 
     public void Levels()
@@ -33,12 +33,12 @@ public class Menu : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene("Target_Run");
+        SceneManager.LoadScene("Loading_Run");
     }
 
     public void Level2()
     {
-        SceneManager.LoadScene("Jumping_Puzzle");
+        SceneManager.LoadScene("Loading_Jumping");
     }
 
     public void Level3()
@@ -48,12 +48,32 @@ public class Menu : MonoBehaviour
 
     public void Level4()
     {
-        SceneManager.LoadScene("Target_Practice");
+        SceneManager.LoadScene("Loading_Practice");
     }
 
     public void MazeLevel()
     {
         SceneManager.LoadScene("Maze");
+    }
+
+    public void DemoLevel()
+    {
+        SceneManager.LoadScene("Level_Demo");
+    }
+
+    public void JumpingLevel()
+    {
+        SceneManager.LoadScene("Jumping_Puzzle");
+    }
+
+    public void RunLevel()
+    {
+        SceneManager.LoadScene("Target_Run");
+    }
+
+    public void PracticeLevel()
+    {
+        SceneManager.LoadScene("Target_Practice");
     }
 
     public void MazeLoad()
