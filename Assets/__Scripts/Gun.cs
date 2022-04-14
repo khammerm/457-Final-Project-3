@@ -14,6 +14,8 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public AmmoDisplay ammo;
+
+    public AudioSource gunSound;
     
     private float nextTimeToFire = 0f;
 
@@ -39,6 +41,7 @@ public class Gun : MonoBehaviour
         if(canUse)
         {
             // playing our muzzleflash particle system
+            gunSound.Play();
             muzzleFlash.Play();
             RaycastHit hit;
             // raycasting for bullets

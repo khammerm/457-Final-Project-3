@@ -20,8 +20,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+
         // press z to simulate player taking dmg, demonstrate color gradient
-        if(Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
            TakeDamage(20f);
         }

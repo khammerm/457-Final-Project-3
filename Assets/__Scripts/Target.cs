@@ -8,6 +8,8 @@ public class Target : MonoBehaviour
     Color origColor;
     float flashTime = .1f;
 
+    public AudioSource enemyDieSound;
+
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -23,6 +25,7 @@ public class Target : MonoBehaviour
     }
     void Die()
     {
+        enemyDieSound.Play();
         Destroy(gameObject);
     }
     void FlashStart()

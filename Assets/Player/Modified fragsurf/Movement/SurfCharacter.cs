@@ -25,6 +25,8 @@ namespace Fragsurf.Movement {
         public float rigidbodyPushForce = 2f;
         public bool solidCollider = false;
 
+        public AudioSource jumpSound;
+
         [Header("View Settings")]
         public Transform viewTransform;
         public Transform playerRotationTransform;
@@ -218,6 +220,8 @@ namespace Fragsurf.Movement {
 
         private void Update () {
 
+            
+
             _colliderObject.transform.rotation = Quaternion.identity;
 
 
@@ -278,7 +282,12 @@ namespace Fragsurf.Movement {
         }
 
         private void UpdateMoveData () {
-            
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                jumpSound.Play();
+            }
+
             _moveData.verticalAxis = Input.GetAxisRaw ("Vertical");
             _moveData.horizontalAxis = Input.GetAxisRaw ("Horizontal");
 
@@ -296,6 +305,8 @@ namespace Fragsurf.Movement {
             bool moveBack = _moveData.verticalAxis < 0f;
             bool jump = Input.GetButton ("Jump");
 
+            
+
             if (!moveLeft && !moveRight)
                 _moveData.sideMove = 0f;
             else if (moveLeft)
@@ -311,7 +322,12 @@ namespace Fragsurf.Movement {
                 _moveData.forwardMove = -moveConfig.acceleration;
             
             if (Input.GetButtonDown ("Jump"))
+            {
                 _moveData.wishJump = true;
+                
+            }
+                
+                
 
             if (!Input.GetButton ("Jump"))
                 _moveData.wishJump = false;

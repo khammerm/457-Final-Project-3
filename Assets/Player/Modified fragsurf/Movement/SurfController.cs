@@ -30,6 +30,8 @@ namespace Fragsurf.Movement {
 
         private float frictionMult = 1f;
 
+        public AudioSource jumpSound;
+
         ///// Methods /////
 
         Vector3 groundNormal = Vector3.up;
@@ -526,6 +528,7 @@ namespace Fragsurf.Movement {
             
             _surfer.moveData.velocity.y += _config.jumpForce;
             jumping = true;
+            
 
         }
 

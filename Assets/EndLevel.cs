@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndLevel : MonoBehaviour
 {
 
-    
+    public AudioSource endLevelSound;
     public GameObject EndofLevel;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,8 @@ public class EndLevel : MonoBehaviour
     {
         if(other.gameObject.tag == "EndLevel")
         {
-            Debug.Log("got here");
+            DontDestroyOnLoad(endLevelSound);
+            endLevelSound.Play();
             SceneManager.LoadScene("MainMenu");
         }
     }
