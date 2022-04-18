@@ -25,7 +25,8 @@ public class Target : MonoBehaviour
     }
     void Die()
     {
-        enemyDieSound.Play();
+        if(enemyDieSound != null)
+            enemyDieSound.Play();
         Destroy(gameObject);
     }
     void FlashStart()

@@ -40,9 +40,10 @@ public class Gun : MonoBehaviour
 
         if(canUse)
         {
-            // playing our muzzleflash particle system
-            gunSound.Play();
-            muzzleFlash.Play();
+            if(gunSound != null)
+                gunSound.Play();  // shooting sound
+
+            muzzleFlash.Play();  // muzzle flash particles
             RaycastHit hit;
             // raycasting for bullets
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))

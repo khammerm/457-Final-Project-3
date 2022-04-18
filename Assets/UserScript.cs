@@ -17,7 +17,8 @@ public class UserScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            jumpSound.Play();
+            if(jumpSound != null)
+                jumpSound.Play();
         }
     }
 }

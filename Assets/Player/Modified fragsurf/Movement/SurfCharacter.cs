@@ -285,7 +285,8 @@ namespace Fragsurf.Movement {
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpSound.Play();
+                if(jumpSound != null)
+                    jumpSound.Play();
             }
 
             _moveData.verticalAxis = Input.GetAxisRaw ("Vertical");
