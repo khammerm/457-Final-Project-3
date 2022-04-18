@@ -11,6 +11,7 @@ public class AmmoDisplay : MonoBehaviour
 
     public bool isReloading = false;
 
+    public WeaponSwitching script;
     public Text weaponName;
     public Text ammoText;
     public GameObject reloadingText;
@@ -26,19 +27,26 @@ public class AmmoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetMouseButton(0) && !gunFiring && ammo>0 && isReloading ==false)
+        if(script.selectedWeapon == 1)
         {
-            gunFiring = true;
-            ammo--;
-            UpdateTexts();
-            gunFiring = false;
-            
+            if(Input.GetButton("Fire 1") && !gunFiring && ammo>0 && isReloading ==false)
+            {
+                gunFiring = true;
+                ammo--;
+                UpdateTexts();
+                gunFiring = false;   
+            }
+        }else
+        {
+            if(Input.GetButtonDown("Fire 1") && !gunFiring && ammo > 0 && isReloading == false)
+            {
+                gunFiring = true;
+                ammo -= 25;
+                UpdateTexts();
+                gunFiring = false;
+            }
         }
-
-
-
-
+            
         ReloadWeapon();
 
         UpdateTexts();

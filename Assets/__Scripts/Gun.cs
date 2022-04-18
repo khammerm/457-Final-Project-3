@@ -1,4 +1,5 @@
 using UnityEngine;
+using static WeaponSwitching;
 
 public class Gun : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Gun : MonoBehaviour
     public float fireRate = 15f;
     public bool canUse = true;
 
+    public WeaponSwitching Script;
     public LineRenderer bulletTrail;
     public Transform shootPoint;
     public Camera fpsCam;
@@ -21,12 +23,19 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-
-
-        if(ammo.isReloading== false && canUse)
+        
+        if(ammo.isReloading== false && canUse && Script.selectedWeapon == 1)
         {
             // basic input reading
             if (Input.GetButton("Fire 1") && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
+        }else
+        {
+            // basic input reading
+            if (Input.GetButtonDown("Fire 1") && Time.time >= nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();

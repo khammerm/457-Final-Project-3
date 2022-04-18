@@ -486,6 +486,7 @@ MonoBehaviour:
   ammo: 25
   gunFiring: 0
   isReloading: 0
+  script: {fileID: 7377760737116370692}
   weaponName: {fileID: 7377760736943123106}
   ammoText: {fileID: 7377760738079170101}
   reloadingText: {fileID: 0}
@@ -10574,6 +10575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e71b786ec397464ba356ea8d1431b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 0}
 --- !u!1 &7377760737639313769
 GameObject:
   m_ObjectHideFlags: 0
@@ -21511,8 +21513,9 @@ MonoBehaviour:
   impactForce: 30
   fireRate: 15
   canUse: 1
-  bulletTrail: {fileID: 0}
-  shootPoint: {fileID: 0}
+  Script: {fileID: 7377760737116370692}
+  bulletTrail: {fileID: 5751492132319731373, guid: 385b003878a21cb40b094edfcd687bf1, type: 3}
+  shootPoint: {fileID: 8039610406371644538}
   fpsCam: {fileID: 3295685620239472669}
   muzzleFlash: {fileID: 7377760738121102186}
   impactEffect: {fileID: 7378769773227841246}
@@ -21634,8 +21637,9 @@ MonoBehaviour:
   impactForce: 30
   fireRate: 15
   canUse: 1
-  bulletTrail: {fileID: 0}
-  shootPoint: {fileID: 0}
+  Script: {fileID: 7377760737116370692}
+  bulletTrail: {fileID: 5751492132319731373, guid: 385b003878a21cb40b094edfcd687bf1, type: 3}
+  shootPoint: {fileID: 6898030333562392242}
   fpsCam: {fileID: 3295685620239472669}
   muzzleFlash: {fileID: 7377760737465215751}
   impactEffect: {fileID: 7378769773227841246}
@@ -21768,7 +21772,7 @@ MonoBehaviour:
   friction: 6
   maxSpeed: 6
   maxVelocity: 50
-  slopeLimit: 45
+  slopeLimit: 75
   clampAirSpeed: 1
   airCap: 0.4
   airAcceleration: 12
