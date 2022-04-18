@@ -46,7 +46,7 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
 
-        if(canUse)
+        if (canUse)
         {
             if(gunSound != null)
                 gunSound.Play();  // shooting sound
@@ -56,17 +56,22 @@ public class Gun : MonoBehaviour
             // raycasting for bullets
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
             {
-                target.TakeDamage(damage);
-            }
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
-            // instantiate our impact system with Quaternian rotation, would prob work better with diff particle system.
-            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+                // dmg for targets (future enemies)
+                Target target = hit.transform.GetComponent<Target>();
+                if (target != null)
+                {
+                    target.TakeDamage(damage);
+                }
+                if (hit.rigidbody != null)
+                {
+                    hit.rigidbody.AddForce(-hit.normal * impactForce);
+                }
+                // instantiate our impact system with Quaternian rotation, would prob work better with diff particle system.
+                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGO, 2f);
 
-            SpawnBulletTrail(hit.point);
+                SpawnBulletTrail(hit.point);
+            }
         }
     }
     public void SpawnBulletTrail(Vector3 hitPoint)
