@@ -19,6 +19,7 @@ public class AmmoDisplay : MonoBehaviour
     public GameObject reloadingText;
     public int targetsKilled = 0;
     public float timer = 0;
+    public int mins = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -65,9 +66,17 @@ public class AmmoDisplay : MonoBehaviour
     void UpdateTexts()
     {
         ammoText.text = ammo.ToString();
-        targetsKilledText.text = targetsKilled.ToString();
+        targetsKilledText.text = targetsKilled.ToString() + " / 27";
+
         double conv = System.Math.Round(timer, 2);
-        timerText.text = conv.ToString();
+        
+        if (conv >= 60)
+        {
+            mins++;
+            timer = 0;
+        }
+
+        timerText.text = mins + " : " + conv.ToString();
         
     }
 
