@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/___Scenes/Load_Levels/Loading_Practice.unity
     guid: 9cbcb1a330de57d48be49efcbe2f5c42
+  - enabled: 1
+    path: Assets/___Scenes/Load_Levels/Loading_Maze.unity
+    guid: 004b3d618f404264481a6bf57cbc18ad
   m_configObjects: {}

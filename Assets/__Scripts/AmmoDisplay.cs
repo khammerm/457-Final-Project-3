@@ -14,7 +14,12 @@ public class AmmoDisplay : MonoBehaviour
     public WeaponSwitching script;
     public Text weaponName;
     public Text ammoText;
+    public Text targetsKilledText;
+    public Text timerText;
     public GameObject reloadingText;
+    public int targetsKilled = 0;
+    public float timer = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,10 +51,13 @@ public class AmmoDisplay : MonoBehaviour
                 gunFiring = false;
             }
         }
-            
+
+        timer += Time.deltaTime;
+
         ReloadWeapon();
 
         UpdateTexts();
+
         
     }
 
@@ -57,6 +65,9 @@ public class AmmoDisplay : MonoBehaviour
     void UpdateTexts()
     {
         ammoText.text = ammo.ToString();
+        targetsKilledText.text = targetsKilled.ToString();
+        double conv = System.Math.Round(timer, 2);
+        timerText.text = conv.ToString();
         
     }
 
@@ -94,7 +105,10 @@ public class AmmoDisplay : MonoBehaviour
 
     }
 
-
+    public void killedTarget()
+    {
+        targetsKilled++;
+    }
 
 
 }

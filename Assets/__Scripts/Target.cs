@@ -1,4 +1,5 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Target : MonoBehaviour
@@ -9,11 +10,13 @@ public class Target : MonoBehaviour
     float flashTime = .1f;
 
     public AudioSource enemyDieSound;
+    public AmmoDisplay ammoObject;
 
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
         origColor = meshRenderer.material.color;
+        //ammoObject.killedTarget();
     }
     public void TakeDamage(float amount){
         health -= amount;
@@ -28,6 +31,7 @@ public class Target : MonoBehaviour
         if(enemyDieSound != null)
             enemyDieSound.Play();
         Destroy(gameObject);
+        ammoObject.killedTarget();
     }
     void FlashStart()
     {
