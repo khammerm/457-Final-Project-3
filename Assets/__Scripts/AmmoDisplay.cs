@@ -14,12 +14,17 @@ public class AmmoDisplay : MonoBehaviour
     public WeaponSwitching script;
     public Text weaponName;
     public Text ammoText;
-    public Text targetsKilledText;
-    public Text timerText;
     public GameObject reloadingText;
+
+
+    public Text targetsKilledText;
     public int targetsKilled = 0;
+
+    public Text timerText;
     public float timer = 0;
     public int mins = 0;
+
+    public float bestTime = 0;
 
     // Start is called before the first frame update
     void Start()

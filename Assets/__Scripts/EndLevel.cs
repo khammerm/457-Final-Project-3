@@ -8,17 +8,19 @@ public class EndLevel : MonoBehaviour
 
     public AudioSource endLevelSound;
     public GameObject EndofLevel;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,6 +28,8 @@ public class EndLevel : MonoBehaviour
         {
             DontDestroyOnLoad(endLevelSound);
             endLevelSound.Play();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene("WinMenu");
         }
     }
