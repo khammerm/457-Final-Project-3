@@ -81,6 +81,11 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Loading_Maze");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 
     //wait function here
 
