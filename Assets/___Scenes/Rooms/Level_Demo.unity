@@ -1696,6 +1696,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_X
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
 --- !u!1001 &52429136
@@ -2743,6 +2751,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Z (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
 --- !u!1001 &87575810
@@ -4182,6 +4198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_X
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
 --- !u!1001 &138592565
@@ -4911,6 +4935,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_X
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
 --- !u!4 &160026562 stripped
@@ -13932,6 +13964,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Z
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     - target: {fileID: 2633218625420842530, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
       propertyPath: distanceToCover
       value: 2
@@ -21320,6 +21360,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Y (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
 --- !u!4 &661411289 stripped
@@ -23557,6 +23605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f44020d747a69914bae96fd98cff9db9, type: 3}
+--- !u!82 &713234453 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2274352681081041991, guid: f44020d747a69914bae96fd98cff9db9, type: 3}
+  m_PrefabInstance: {fileID: 713234452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &715646045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24201,6 +24254,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Y (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
 --- !u!1001 &751316236
@@ -34693,6 +34754,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Y
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
 --- !u!1001 &1128348059
@@ -36333,6 +36402,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_X (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
 --- !u!4 &1180043936 stripped
@@ -37784,6 +37861,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_X (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 601a877607fedea4b8ecaeee0bfcc286, type: 3}
 --- !u!1001 &1225181994
@@ -46689,6 +46774,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Y
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2024d823d8b144489a4d4a0575f2a6, type: 3}
 --- !u!1001 &1508521954
@@ -58777,6 +58870,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Z
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
 --- !u!4 &1935355022 stripped
@@ -60263,7 +60364,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011770108}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -63720,6 +63821,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target_Z (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: ammoObject
+      value: 
+      objectReference: {fileID: 21873129}
+    - target: {fileID: 1398509225037425847, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
+      propertyPath: enemyDieSound
+      value: 
+      objectReference: {fileID: 713234453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18bc43d963c8bd04f9e9e9ed297ce43c, type: 3}
 --- !u!4 &2107047515 stripped
